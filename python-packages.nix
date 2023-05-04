@@ -18,20 +18,6 @@ self: super: {
     nativeBuildInputs = [];
     propagatedBuildInputs = [];
   };
-  "argparse" = super.buildPythonPackage rec {
-    pname = "argparse";
-    version = "1.4.0";
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/f2/94/3af39d34be01a24a6e65433d19e107099374224905f1e0cc6bbe1fd22a2f/argparse-1.4.0-py2.py3-none-any.whl";
-      sha256 = "0533cr5w14da8wdb2q4py6aizvbvsdbk3sj7m1jx9lwznvnlf5n3";
-    };
-    format = "wheel";
-    doCheck = false;
-    buildInputs = [];
-    checkInputs = [];
-    nativeBuildInputs = [];
-    propagatedBuildInputs = [];
-  };
   "colorama" = super.buildPythonPackage rec {
     pname = "colorama";
     version = "0.4.6";
@@ -64,10 +50,10 @@ self: super: {
   };
   "n64img" = super.buildPythonPackage rec {
     pname = "n64img";
-    version = "0.3.0";
+    version = "0.3.1";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/cb/dd/e85314811f841a11d4d612193ba5af06459d03a9475a833132bdc5cbce1d/n64img-0.3.0-py3-none-any.whl";
-      sha256 = "14f451w2d3bjc91679l5anbxyar8fbhgzq3pp35vaks6582r9cw0";
+      url = "https://files.pythonhosted.org/packages/a5/6e/0d74d3ba654cc640d8f5180e4d6b27300effedff726225b159dbe87e17f3/n64img-0.3.1-py3-none-any.whl";
+      sha256 = "1w76f8r4x11q9gmj7i5zfpf16znp6b018s9g33brmdy58n5ips2l";
     };
     format = "wheel";
     doCheck = false;
@@ -75,7 +61,6 @@ self: super: {
     checkInputs = [];
     nativeBuildInputs = [];
     propagatedBuildInputs = [
-      self."argparse"
       self."pypng"
     ];
   };

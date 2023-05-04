@@ -37,30 +37,7 @@
             splat = { writeShellScriptBin, callPackage, python3, lib }:
               let
                 packageOverrides = callPackage ./python-packages.nix { };
-                python = python3.override {
-                  packageOverrides = self: super:
-                    let overrides = packageOverrides self super;
-                    in overrides // {
-                      # argparse is in stdlib so things get confusing if it's specified, patch it out
-                      #
-                      # https://github.com/decompals/n64img/issues/10
-                      n64img = overrides.n64img.override {
-                        postConfigure = ''
-                          pushd dist
-                          orig_name="$(echo ./*.whl)"
-                          ${super.wheel}/bin/wheel unpack --dest unpacked ./*.whl
-                          rm ./*.whl
-                          pushd unpacked/"$pname"*
-                          sed -i *.dist-info/METADATA \
-                            -e "/Requires-Dist: argparse/d"
-                          popd
-                          ${super.wheel}/bin/wheel pack ./unpacked/"$pname"*
-                          [ ! -e "$orig_name" ] && mv *.whl "$orig_name"
-                          popd
-                        '';
-                      };
-                    };
-                };
+                python = python3.override { inherit packageOverrides; };
                 dependencyNames = lib.attrsets.attrNames (packageOverrides null null);
                 splatPython = python.withPackages (ps: builtins.map (n: ps."${n}") dependencyNames);
               in
