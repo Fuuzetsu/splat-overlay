@@ -108,10 +108,10 @@ self: super: {
   };
   "rabbitizer" = super.buildPythonPackage rec {
     pname = "rabbitizer";
-    version = "1.7.1";
+    version = "1.7.2";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/ca/b5/c14d5569f1d7361ad071ee940f0aef0e4b2a4fbd159347452eeaaf64449d/rabbitizer-1.7.1.tar.gz";
-      sha256 = "07kp214kwa0s5l0kayziv0g65hakpxmvlll2r0la0rkmm6fzmw2a";
+      url = "https://files.pythonhosted.org/packages/09/63/2e7d2623ef269b1520b6dfe0f3a5c8890a44ba22613bd0dbefa99f026ee9/rabbitizer-1.7.2.tar.gz";
+      sha256 = "0i0f15696dy4d77g96vkha5lrvdsiv7yql4ag8sj2lfazivqzay3";
     };
     format = "setuptools";
     doCheck = false;
@@ -136,10 +136,10 @@ self: super: {
   };
   "spimdisasm" = super.buildPythonPackage rec {
     pname = "spimdisasm";
-    version = "1.13.2";
+    version = "1.13.3";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/4f/e7/231b1e0391795e59dbc867b3cc0df668db75c2b5fdacb3323b320197a068/spimdisasm-1.13.2-py3-none-any.whl";
-      sha256 = "0s0qdgkd5s44w0lz6jsy17y9rzfb26hqaprgah2x9rlxrfr0nw73";
+      url = "https://files.pythonhosted.org/packages/45/43/3acd0bd32b4db0905ed055974bb9a13c53093ca52cca85a8b05881e18a78/spimdisasm-1.13.3-py3-none-any.whl";
+      sha256 = "05ygwq564ig6kc4j6w8mkz6yx4d5zrqcqgrbnm6aix48jd0byaqf";
     };
     format = "wheel";
     doCheck = false;
