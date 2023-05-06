@@ -21,9 +21,11 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git diff --quiet || git diff && echo changes=true >> "$GITHUB_OUTPUT"
-      - name: Check changes
+      - name: Commit and check changes
         if: steps.git-check.outputs.changes == 'true'
         run: |
+          git add .
+          git commit -m 'Automated update of splat and/or dependencies'
           nix flake check
       - name: Push changes
         if: steps.git-check.outputs.changes == 'true'
