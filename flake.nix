@@ -84,8 +84,8 @@
     in
     outputs //
     {
-      overlays.default = _final: prev: {
-        splat = prev.callPackage outputs.packages.${prev.system} { };
+      overlays.default = final: _prev: {
+        splat = outputs.packages.${final.system}.splat;
       };
     };
 
