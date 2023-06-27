@@ -50,10 +50,10 @@ self: super: {
   };
   "n64img" = super.buildPythonPackage rec {
     pname = "n64img";
-    version = "0.3.2";
+    version = "0.3.3";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/21/a3/83e9154a10d778d964278f4811cbcfd5f6fa52d0ae7fa0a3a6a34447a383/n64img-0.3.2-py3-none-any.whl";
-      sha256 = "13ry23wiq1jby59bq82p7slfjqvkzggmnmwdv3zp99hdx56hxyhx";
+      url = "https://files.pythonhosted.org/packages/87/6d/9480bcb7a31d6e96a0a8923c9b64812db0e480921bc988fcbfbce3ddf7a4/n64img-0.3.3-py3-none-any.whl";
+      sha256 = "08brjhb2lw459f3xpwfqq7vzlkvh44i846d3fnw08d0g63inkdax";
     };
     format = "wheel";
     doCheck = false;
