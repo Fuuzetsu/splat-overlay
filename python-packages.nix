@@ -6,10 +6,10 @@
 self: super: {
   "PyYAML" = super.buildPythonPackage rec {
     pname = "PyYAML";
-    version = "6.0";
+    version = "6.0.1";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz";
-      sha256 = "18imkjacvpxfgg1lbpraqywx3j7hr5dv99d242byqvrh2jf53yv8";
+      url = "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz";
+      sha256 = "0hsa7g6ddynifrwdgadqcx80khhblfy94slzpbr7birn2w5ldpxz";
     };
     format = "setuptools";
     doCheck = false;
