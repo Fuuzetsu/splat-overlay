@@ -152,10 +152,10 @@ self: super: {
   };
   "tqdm" = super.buildPythonPackage rec {
     pname = "tqdm";
-    version = "4.65.2";
+    version = "4.66.0";
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/c0/ab/bd9ba7f84c509c8b377628bc66696d52623e30c6c0830db3c78748eec4b4/tqdm-4.65.2-py3-none-any.whl";
-      sha256 = "0xk2czncn2w8g6yrhq6c706p63gh98fypljbix62hmsgxryiyhvc";
+      url = "https://files.pythonhosted.org/packages/a5/d6/502a859bac4ad5e274255576cd3e15ca273cdb91731bc39fb840dd422ee9/tqdm-4.66.0-py3-none-any.whl";
+      sha256 = "0gm0qn57jq5pq29mvg5lam57gg4ica6xdm399qbr0y0b2k3mkm1r";
     };
     format = "wheel";
     doCheck = false;
