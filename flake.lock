@@ -101,11 +101,11 @@
     "splat": {
       "flake": false,
       "locked": {
-        "lastModified": 1696193500,
-        "narHash": "sha256-Zou7NhnQrFGPFLQ5n1+fcrA70xhIj1HiaPBwwjAULHQ=",
+        "lastModified": 1696276907,
+        "narHash": "sha256-BXs6rEdXw9GHnmWKmSPdz8XEVOm3Krr2YU9+JopIhi0=",
         "owner": "ethteck",
         "repo": "splat",
-        "rev": "90bc09644877a414b11de12439e21ed9bec45869",
+        "rev": "dc33b04639ddfd71daf274dfa8814fafc88a44c4",
         "type": "github"
       },
       "original": {
